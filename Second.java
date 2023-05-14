@@ -1,18 +1,26 @@
 package pwnew;
 
-class calc{
-	public int add(int nums[]) {
-		int result=0;
-		for(int e:nums)
-		result=result+e;
-		return result;
+
+class Calc{
+	public int addArray(int myArray[]) {
+		int c=0;
+		for(int e:myArray) {
+			c=c+e;
+		}
+		return c;
+
+			
+			
+			
+		
 	}
 }
-
 class Second{
-	public static void main(String[] args) {
-		calc calc= new calc();
-		int nums[]= {5,5,5,5,5};
-		System.out.println(calc.add(nums));
-	}
+public static void main(String[] args) {
+	
+	Calc c = new Calc();
+	int myArray[]= {5,5,6,4,3,3};
+	System.out.println(c.addArray(myArray));
+	
+}
 }
