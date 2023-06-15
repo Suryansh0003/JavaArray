@@ -1,79 +1,64 @@
 package pwnew;
-
-class animal {
-	public void sleep() {
-		System.out.println("animal is sleeping");
+abstract class moblie{
+	abstract public void compony();
+	abstract public void name();
+	public void price() {
+		System.out.println("this price of this phone is "+rupes);
 	}
-
-	public void eat() {
-		System.out.println("Animal is eating");
-	}
-}
-
-class dog extends animal {
-	@Override
-	public void sleep() {
-		System.out.println("Dog is sleeping");
-	}
-
-	public void eat() {
-		System.out.println("Dog is eating ");
-	}
-}
-
-class cat extends animal {
-	@Override
-	public void sleep() {
-		System.out.println("Cat is sleeping ");
-	}
-
-	@Override
-	
-	public void eat() {
-		
-		System.out.println("Cat is eating ");
-	}
+	final int rupes=14000;
 	
 }
-class azuba{
-	public void myanimal(animal af) {
-		af.eat();
-		af.sleep();
+class MobileOrigin extends moblie{
+	@Override
+	public void compony() {
+		System.out.println("origin of phone ...Chinise ");
 		
-		System.out.println("___________________________");
+		
+		
+	
+	}
+	@Override
+	public void name() {
+	System.out.println("Name OF Phone ...Realmi");
+		
+	}
+}
+class mobileorigin2 extends moblie{
+   @Override
+public void compony() {
+System.out.println("compony origin ..Netherland");
+	
+}
+   @Override
+	public void name() {
+	System.out.println("phone name is ...Samsung");
+	}
+
+	
+}
+ class polyy{
+	public void exe(moblie mm) {
+		mm.compony();
+		mm.name();
+		mm.price();
+		System.out.println("_____________________________");
 	}
 }
 public class Polymorphism {
 
 	public static void main(String... args) {
-//cat ct=new cat();
-//dog dg=new dog();
-//animal al=new cat();
-//animal al2=new dog();
 
-
-//System.out.println("_______________________________________");
-//al.sleep();
-//al.eat();
-//al2.sleep();
-//al2.eat();
-//System.out.println("_______________________________________");
-//animal af;
-//af=dg;
-//
-//af.eat();
-//af.sleep();
-//
-//af=ct;
-//af.eat();
-//af.sleep();
+		MobileOrigin m1 =new MobileOrigin();
+		mobileorigin2 m2 =new mobileorigin2();
+		polyy p=new polyy();
+		p.exe(m1);
+		p.exe(m2);
+	
 		
-dog dd=new dog();
-cat t=new cat();
-
-azuba az=new azuba();
-az.myanimal(dd);
-az.myanimal(t);
+		
+		
+		
+		
 	}
 
 }
